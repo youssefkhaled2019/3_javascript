@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- =====================================  -->
+
+    <!-- <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">Click me to display Date and Time.</button>
+    <p id="demo">...</p> -->
+    <!-- <button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button> -->
+
+    <!-- =====================================  -->
+
+    <!-- <button onclick="document.getElementById('myImage').src='/src/pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="/src/pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='/src/pic_bulboff.gif'">Turn off the light</button>  -->
+
+    <!-- =====================================  -->
+    <!-- <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo').style.fontSize='35px'"
+    >
+      Click Me!
+    </button>
+    <script>
+      document.getElementById("demo").style.display = "none"; 
+      document.getElementById("demo").style.fontSize = "35px";
+      document.getElementById("demo").style.display = "block";
+    </script> -->
+    <!-- ===============[JavaScript in <body>]======================  -->
+
+    <!-- <p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+<script>
+    function myFunction() {
+      document.getElementById("demo").innerHTML = "Paragraph changed.";
+    }
+</script> -->
+    <!-- Placing scripts at the bottom of the <body> element improves the display speed, because script interpretation slows down the display. -->
+
+    <!-- ==============[External JavaScript]=======================  -->
+
+    <!--
+ <script src="myScript1.js"></script>
+<script src="myScript2.js"></script>  
+-->
+    <!-- ================[Output]=====================  -->
+
+    <!-- <p id="demo"></p>
+
+<script>
+
+// 1  Changing the innerHTML property of an HTML element is a common way to display data in HTML.
+ -Then use the innerHTML property to change the HTML content of the HTML element:
+      document.getElementById("demo").innerHTML = "<h2>Hello World</h2>";
+
+-Then use the innerText property to change the inner text of the HTML element:
+      document.getElementById("demo").innerText = "Hello World";
+
+note:Use innerHTML when you want to change an HTML element.
+     Use innerText when you only want to change the plain text
+
+
+// 2   -Using document.write() after an HTML document is loaded, will delete all existing HTML:
+    -The document.write() method should only be used for testing.
+    -  In JavaScript, the window object is the global scope object. This means that variables, properties,
+         and methods by default belong to the window object. This also means that specifying the window keyword is optional:
+>>>>>> <button type="button" onclick="document.write(5 + 6)">Try it</button>
+
+//3
+window.alert(5 + 6);
+alert(5 + 6);
+
+//4  For debugging purposes, you can call the console.log() method in the browser to display data.
+console.log(5 + 6);
+
+// 5
+<button onclick="window.print()">Print this page</button>
+</script> -->
+
+    <!-- ===============[Statements]======================  -->
+    <!-- <script>
+//   ****************************************  
+ let carName;  # undefined 
+//   ****************************************  
+    let x, y, z;    // Statement 1
+    x = 5;          // Statement 2
+    y = 6;          // Statement 3
+    z = x + y;      // Statement 4
+//   ****************************************  
+    let x=10, y, z;    // Statement 1
+    y = 6;          // Statement 3
+    z = x + y;      // Statement 4
+//   ****************************************  
+    let   a = 5; b = 6; c = a + b; 
+    let x=10, y=20, z=x+y;
+//   ****************************************  
+    let person = "Hege";
+    let x = y + z; 
+
+//   ****************************************  
+    let z1 =10,z2=122.3
+    let z3 ="John Doe",z4='John Doe'
+
+
+//   ****************************************  
+    let x, y;
+    x = 5 + 6;
+    y = x * 10;
+
+//   ****************************************  
+    xx="John" + " " + "Doe"
+//   ****************************************  
+// How to create variables:
+var x;
+let y;
+
+// How to use variables:
+x = 5;
+y = 6;
+let z = x + y;
+
+//   ****************************************  
+
+    let $ = "Hello World";
+    let $$$ = 2;
+    let $myMoney = 5;
+
+    let _lastName = "Johnson";
+    let _x = 2;
+    let _100 = 5;
+
+//   ****************************************  
+ let x;       // Now x is undefined
+x = 5;       // Now x is a Number
+x = "John";  // Now x is a String 
+
+
+//   ****************************************  
+// With decimals:
+let x1 = 34.00;
+
+// Without decimals:
+let x2 = 34; 
+
+//   ****************************************  
+
+// Single quote inside double quotes:
+let answer1 = "It's alright";
+
+// Single quotes inside double quotes:
+let answer2 = "He is called 'Johnny'";
+
+// Double quotes inside single quotes:
+let answer3 = 'He is called "Johnny"';
+
+//   ****************************************  
+
+
+
+//   ****************************************  
+
+
+
+//   ****************************************  
+
+</script> -->
+
+    <!-- ================[Comments]=====================  -->
+
+    <!-- <script>
+
+    // 
+    /* and */
+</script> -->
+
+    <!-- ===============[Variables]======================  -->
+    <!-- <p id="demo"></p> -->
+    <!-- <script>
+    
+    1-Automatically
+    x = 5;
+    y = 6;
+    z = x + y;
+    document.getElementById("demo").innerHTML = "The value of z is: " + z;
+    
+    NOte:It is considered good programming practice to always declare variables before use.
+  
+    2-Using var
+    var x = 5;
+    var y = 6;
+    var z = x + y;
+    document.getElementById("demo").innerHTML ="The value of z is: " + z;
+   
+    3-Using let
+    let cv       //cv variable has no value (technically it is undefined).
+    
+    let x = 5;
+    let y = 6;
+    let z = x + y;
+   
+    4-Using const
+        const price1 = 5;
+        const price2 = 6;
+        let total = price1 + price2;
+        Document.getElementById("demo").innerHTML = "The total is: " + total;
+
+</script> -->
+
+    <!-- <script>
+    // -You can declare many variables in one statement.
+    //    let person = "John Doe", carName = "Volvo", price = 200; 
+    
+    // -A declaration can span multiple lines: 
+        // let person = "John Doe",
+        //     carName = "Volvo",
+        //     price = 200;
+
+</script> -->
+    <!-- ================[if, else, and else if]=====================  -->
+    <!-- <script>
+//   ****************************************  
+  if (hour < 18) {
+  greeting = "Good day";
+} 
+//   ****************************************  
+if (hour < 18) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+//   ****************************************  
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+//   ****************************************  
+let text;
+if (Math.random() < 0.5) {
+  text = "<a href='https://w3schools.com'>Visit W3Schools</a>";
+} else {
+  text = "<a href='https://wwf.org'>Visit WWF</a>";
+}
+document.getElementById("demo").innerHTML = text;
+//   ****************************************  
+
+</script> -->
+
+    <!-- ==================[Switch ]===================  -->
+    <!-- <script>
+
+// switch(expression) {
+//   case x:
+//     // code block
+//     break;
+//   case y:
+//     // code block
+//     break;
+//   default:
+//     // code block
+//   } 
+ // ===============================================
+//   The getDay() method returns the weekday as a number between 0 and 6.
+// (Sunday=0, Monday=1, Tuesday=2 ..)
+//   switch (new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//      day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case 6:
+//     day = "Saturday";
+// }
+// ===============================================
+// switch (new Date().getDay()) {
+//   case 6:
+//     text = "Today is Saturday";
+//     break;
+//   case 0:
+//     text = "Today is Sunday";
+//     break;
+//   default:
+//     text = "Looking forward to the Weekend";
+// }
+// ===============================================
+// switch (new Date().getDay()) {
+//   case 4:
+//   case 5:
+//     text = "Soon it is Weekend";
+//     break;
+//   case 0:
+//   case 6:
+//     text = "It is Weekend";
+//     break;
+//   default:
+//     text = "Looking forward to the Weekend";
+// }
+// ===============================================
+// let x = "0";
+// let x = 0;
+// switch (x) {  //  Switch cases use strict comparison (===).
+//   case 0:     //  The values must be of the same type to match.
+//     text = "Off";
+//     break;
+//   case 1:
+//     text = "On";
+//     break;
+//   default:
+//     text = "No value found";
+// } 
+</script> -->
+    <!-- =================[Operators]====================  -->
+    <!-- <script>
+
+    //var x = 10;
+    //x += 5;
+
+   //  let x = 5; 
+   //  x++;#Incrementing
+   // x--; #Decrementing
+   //  let z = x ** 2;  #Exponentiation
+
+// ************************** Assignment Operator *****************************//
+// Operator 	Example 	  Same As
+//   = 	      x = y 	    x = y
+//   +=    	  x += y 	    x = x + y
+//   -= 	    x -= y 	    x = x - y
+//   *= 	    x *= y    	x = x * y
+//   /= 	    x /= y 	    x = x / y
+//   %= 	    x %= y 	    x = x % y
+//   **= 	    x **= y 	  x = x ** y
+// ************************** Comparison Operators *****************************//
+// Operator 	Description
+// == 	      equal to
+// === 	      equal value and equal type
+// != 	      not equal
+// !== 	      not equal value or not equal type
+// > 	        greater than
+// < 	        less than
+// >= 	      greater than or equal to
+// <= 	      less than or equal to
+// ? 	        ternary operator                  ???
+// ************************** JavaScript Logical Operators *****************************//
+// Operator 	Description
+// &&       	logical and
+// || 	     logical or
+// ! 	       logical not
+// ************************** JavaScript Type Operators *****************************//
+// Operator 	   Description
+// typeof 	     Returns the type of a variable
+// instanceof 	 Returns true if an object is an instance of an object type
+// ************************** JavaScript Bitwise Operators *****************************//
+// Operator 	Description 	          Example 	Same as 	    Result 	Decimal
+//   &      	AND 	                  5 & 1 	  0101 & 0001 	0001 	   1
+//   | 	      OR 	                    5 | 1 	  0101 | 0001 	0101   	 5
+//   ~ 	      NOT 	                  ~ 5 	    ~0101 	      1010 	   10
+//   ^ 	      XOR 	                  5 ^ 1 	  0101 ^ 0001 	0100 	   4
+//  << 	      left shift 	            5 << 1 	  0101 << 1 	  1010    	 10
+//  >> 	      right shift 	          5 >> 1 	  0101 >> 1 	  0010 	      2
+//  >>> 	    unsigned right shift 	  5 >>> 1 	0101 >>> 1 	  0010 	     2
+
+
+
+
+// The examples above uses 4 bits unsigned examples. But JavaScript uses 32-bit signed numbers.
+// Because of this, in JavaScript, ~ 5 will not return 10. It will return -6.
+// ~00000000000000000000000000000101 will return 11111111111111111111111111111010
+// Bitwise operators are fully described in the JS Bitwise chapter.
+
+
+Note
+-Most programming languages have many number types:
+-Whole numbers (integers):   byte (8-bit), short (16-bit), int (32-bit), long (64-bit)
+-Real numbers (floating-point): float (32-bit), double (64-bit).
+-Javascript numbers are always one type: double (64-bit floating point).
+
+// ************************** JavaScript Logical Operators *****************************//
+
+</script> 
+     -->
+    <!-- =================[Math]====================  -->
+    <!-- <script>
+    // let z = Math.pow(x,2);
+</script> -->
+
+    <!-- =================[Data Types]====================  -->
+    <!-- <script>
+    //     // Numbers:
+    // let length = 16;
+    // let weight = 7.5;
+
+    // // Strings:
+    // let color = "Yellow";
+    // let lastName = "Johnson";
+
+    // // Booleans
+    // let x = true;
+    // let y = false;
+
+    // // Object:
+    // const person = {firstName:"John", lastName:"Doe", age:50};
+
+    // // Array object:
+    // const cars = ["Saab", "Volvo", "BMW"];
+
+    // // Date object:
+    // const date = new Date("2022-03-25"); 
+
+    // Exponential Notation 
+    // let y = 123e5;    // 12300000
+    // let z = 123e-5;   // 0.00123 
+
+    // let x = BigInt("123456789012345678901234567890"); 
+
+
+    let x = 5;
+    let y = 5;
+    let z = 6;
+    let c=undefined;
+    (x == y)       // Returns true
+    (x == z)       // Returns false 
+    let car = "";    // The value is "", the typeof is "string" 
+
+
+    let x;       // Now x is undefined
+    x = 5;       // Now x is a Number
+    x = "John";  // Now x is a String 
+
+
+    // Single quote inside double quotes:
+       let answer1 = "It's alright";
+    // Single quotes inside double quotes:
+       let answer2 = "He is called 'Johnny'";
+    // Double quotes inside single quotes:
+       let answer3 = 'He is called "Johnny"';
+
+
+    typeof ""             // Returns "string"
+    typeof "John"         // Returns "string"
+    typeof "John Doe"     // Returns "string"
+    typeof 0              // Returns "number"
+    typeof 314            // Returns "number"
+    typeof 3.14           // Returns "number"
+    typeof (3)            // Returns "number"
+    typeof (3 + 4)        // Returns "number"     
+
+</script> -->
+    <!-- ==================[Function]===================  -->
+    <!-- 
+<script>
+let zx = myFunction(4, 3);
+
+let value = toCelsius(10); 
+let value = toCelsius; 
+
+function myFunction(p1, p2) {
+  return p1 * p2;
+} 
+
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+
+
+
+
+
+
+
+    // Function to compute the product of p1 and p2
+
+    let xxxx = xx(4, 3);
+    let xxx =  xx();
+    let xx = xx;
+    
+    function xx(p1, p2) {
+    return p1 * p2;
+    }
+
+
+    // ------------------------------------------------ //
+
+     //     Since local variables are only recognized inside their functions, variables with the same name can be used in different functions.
+    // Local variables are created when a function starts, and deleted when the function is completed.
+    // code here can NOT use carName
+
+        function myFunction() {
+        let carName = "Volvo";
+        // code here CAN use carName
+        }
+
+        // code here can NOT use carName 
+    // ------------------------------------------------ //
+
+
+
+
+
+</script>
+
+
+-->
+
+    <!-- ===============[Objects]======================  -->
+    <!-- <p id="demo"></p>
+
+<script>
+// Create an Object:
+//It is a common practice to declare objects with the const keyword.
+const person = {firstName:"John",
+                  lastName:"Doe", 
+                  age:50, 
+                  eyeColor:"blue"};
+
+// Display Data from the Object:
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+// =============================//
+// Create an Object
+const person2 = {};
+
+// Add Properties
+person2.firstName = "John";  //person2.firstName or person2["firstName"] 
+person2.lastName = "Doe";
+person2.age = 50;
+person2.eyeColor = "blue"
+
+
+// =============================//
+// Create an Object
+const person3 = new Object();
+
+// Add Properties
+person3.firstName = "John"; 
+person3.lastName = "Doe";
+person3.age = 50;
+person3.eyeColor = "blue";
+
+
+// =============================//
+const person4 = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {return this.firstName + " " + this.lastName;}
+};
+
+name = person4.fullName();
+// =============================//
+const person5 = {
+  firstName: "John",
+  lastName: "Doe",
+  age:50,
+  eyeColor: "blue"
+};
+
+const xd = person5;
+
+// Change Age in person5
+xd.age = 10;
+document.getElementById("demo").innerHTML =
+person.firstName + " is " + person.age + " years old.";
+
+</script> -->
+
+    <!--  -->
+
+    <!-- ==================[Objects]===================  -->
+    <!-- <p id="demo"></p>
+<script>
+ // objectName.property
+let age = person.age;
+//objectName["property"]
+let age2 = person["age"]; 
+//objectName[expression]
+let age3 = person[x];
+    //=================Adding New Properties=================//
+
+const person6 = {
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue"
+};
+
+person6.nationality = "English";
+document.getElementById("demo").innerHTML =
+person.firstname + " is " + person6.nationality + ".";
+
+
+    //================Deleting Properties==================//
+
+    const person7 = {
+  firstname: "John",
+  lastname: "Doe",
+  age: 50,
+  eyecolor: "blue"
+};
+// The delete keyword deletes both the value of the property and the property itself.
+// After deletion, the property cannot be used before it is added back again.
+
+delete person7.age;//delete person7["age"];
+
+document.getElementById("demo").innerHTML =
+person7.firstname + " is " + person7.age + " years old.";
+
+    //================Nested Objects==================//
+
+    myObj = {
+  name:"John",
+  age:30,
+  myCars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+let p1 = "myCars";
+let p2 = "car2";
+
+myObj.myCars.car2;  //myObj.myCars["car2"] ,myObj["myCars"]["car2"],myObj[p1][p2];
+    //==================================//
+
+
+    //==================================//
+
+
+
+    //==================================//
+
+
+    //==================================//
+
+
+
+    //==================================//
+
+
+    //==================================//
+
+
+
+    //==================================//
+
+</script> -->
+
+    <!-- ================[Object ]=====================  -->
+    <!-- <p id="demo"></p> -->
+
+    <!-- <script>
+const person8 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+// Add a Method
+person8.fullName2 = function() {
+  return this.firstName + " " + this.lastName;
+  // return (this.firstName + " " + this.lastName).toUpperCase();
+};
+document.getElementById("demo").innerHTML = person8.fullName2();
+</script> -->
+    <!-- ===================[Object ]==================  -->
+    <!-- <script>
+    //===============================================//
+// Create an Object
+const person9 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+#1
+document.getElementById("demo").innerHTML = person9; #[object Object]
+#2
+//Displaying Object Properties
+document.getElementById("demo").innerHTML = person9.name + "," + person9.age + "," + person9.city;
+#3
+//Displaying Properties in a Loop
+
+// Build a Text
+let text = "";
+for (let x in person9) {
+  text += person9[x] + " ";
+};
+
+// Display the Text
+document.getElementById("demo").innerHTML = text;
+
+#4
+//Using Object.values()
+const myArray = Object.values(person9); //<---------------      John,30,New York
+document.getElementById("demo").innerHTML = myArray;
+
+#5
+//Using Object.entries()  makes it simple to use objects in loops:
+const fruits = {Bananas:300, Oranges:200, Apples:500};
+let text2 = "";
+for (let [k, v] of Object.entries(fruits)) {
+  text2 += k + ": " + v + "<br>";
+}
+
+#6
+//Using JSON.stringify()
+//JavaScript objects can be converted to a string with JSON method JSON.stringify().
+//JSON.stringify() is included in JavaScript and supported in all major browsers
+
+let myString = JSON.stringify(person9);
+document.getElementById("demo").innerHTML = myString;
+
+    //===============================================//
+
+    //===============================================//
+
+    //===============================================//
+
+
+
+
+
+
+</script> -->
+    <!-- =================[Object ]====================  -->
+    <!-- <script>
+// Constructor Function for Person objects
+
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+  this.nationality = "English";//default value
+  this.fullName = function() {
+    return this.firstName + " " + this.lastName;
+  };
+}
+
+// Create a Person object
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+const mySister = new Person("Anna", "Rally", 18, "green");
+
+mySister.mode = "single";
+
+// Person.nationality = "English";//You can NOT add a new property to an object constructor:
+// Person.prototpe.nationality = "English"; // To add a new property, you must add it to the constructor function prototype:
+
+
+
+
+
+
+// Add a Name Method
+myMother.changeName = function (name) {
+  this.lastName = name;
+}
+// Change Name
+myMother.changeName("Doe");
+
+
+
+// TypeError: myMother.changeName is not a function
+Person.changeName = function (name) {
+  this.lastName = name;
+}
+myMother.changeName("Doe"); 
+
+
+
+Person.prototype.changeName = function (name) {
+  this.lastName = name;
+}
+myMother.changeName("Doe"); // OK
+
+
+// Display age
+document.getElementById("demo").innerHTML =
+"My father is " + mySister.mode  + "."; 
+
+</script> -->
+    <!-- =====================================  -->
+
+    <!-- =====================================  -->
+    <!-- <SCript>
+// new Object()   // A new Object object
+// new Array()    // A new Array object
+// new Map()      // A new Map object
+// new Set()      // A new Set object
+// new Date()     // A new Date object
+// new RegExp()   // A new RegExp object
+// new Function() // A new Function object
+
+// Note:The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+//     //==============================//
+// "";           // primitive string
+// 0;            // primitive number
+// false;        // primitive boolean
+
+// {};           // object object
+// [];           // array object
+// /()/          // regexp object
+// // function(){}; // function 
+
+</SCript> -->
+    <!-- ====================[Events]=================  -->
+    <!-- onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+<p id="demo"></p> -->
+    <!-- <button onclick="displayDate()">The time is?</button> -->
+    <!-- <button onclick="this.innerHTML = Date()">The time is?</button> -->
+    <!-- <SCript>
+// Here are some examples of HTML events:
+// An HTML web page has finished loading
+// An HTML input field was changed
+// An HTML button was clicked
+
+
+
+
+Event 	      Description
+onchange 	    An HTML element has been changed
+onclick 	    The user clicks an HTML element
+onmouseover 	The user moves the mouse over an HTML element
+onmouseout 	  The user moves the mouse away from an HTML element
+onkeydown 	  The user pushes a keyboard key
+onload 	      The browser has finished loading the page
+#https://www.w3schools.com/jsref/dom_obj_event.asp
+
+
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+
+</SCript> -->
+
+    <!-- ====================[Boolean]=================  -->
+
+    <!-- <script>
+      Boolean(10 > 9);
+
+      //===============
+      const x = new Boolean(false);
+      const y = new Boolean(false);
+      document.getElementById("demo").innerHTML = x === y; //false
+      document.getElementById("demo").innerHTML = x == y; //false
+      // Comparing two JavaScript objects always return false.
+
+      //===============
+    </script> -->
+
+    <!-- ==================[for-for in- for of]===================  -->
+    <!-- <p id="demo"></p> -->
+
+    <!-- <script>
+      //-------------------------------------------------
+      // const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      // let i, len, text;
+      // for (i = 0, len = cars.length, text = ""; i < len; i++) {
+      //   text += cars[i] + "<br>";
+      // }
+      // document.getElementById("demo").innerHTML = text;
+      //-------------------------------------------------
+      // const person = {fname:"John", lname:"Doe", age:25};
+      // const numbers = [45, 4, 9, 16, 25];
+      // let txt = "";
+      // for (let x in person) { //let x in numbers
+      //   txt += person[x] + " ";
+      // }
+
+      // document.getElementById("demo").innerHTML = txt;
+      //-------------------------------------------------
+      // const numbers = [45, 4, 9, 16, 25];
+
+      // let txt = "";
+      // numbers.forEach(myFunction);
+      // document.getElementById("demo").innerHTML = txt;
+
+      // function myFunction(value, index, array) {  //(value) you can use value alone 
+      //   txt += value + "<br>";
+      // }
+      //-------------------------------------------------
+      // const cars = ["BMW", "Volvo", "Mini"];
+      // let text = "";
+      // for (let x of cars) {
+      //   text += x + "<br>";
+      // }
+      // document.getElementById("demo").innerHTML = text;
+      //-------------------------------------------------
+      // let language = "JavaScript";
+      // let text = "";
+      // for (let x of language) {
+      //   text += x + "<br>";
+      // }
+      // document.getElementById("demo").innerHTML = text;
+
+      //-------------------------------------------------
+
+      //-------------------------------------------------
+    </script> -->
+    <!-- ================[while]=====================  -->
+    <p id="demo"></p>
+
+    <!-- <script>
+      // let text = "";
+      // let i = 0;
+      // while (i < 10) {
+      //   text += "<br>The number is " + i;
+      //   i++;
+      // }
+      // document.getElementById("demo").innerHTML = text;
+      // ===============================================
+      // let text = "";
+      // let i = 0;
+      // do {
+      //   text += "<br>The number is " + i;
+      //   i++;
+      // } while (i < 10);
+      // document.getElementById("demo").innerHTML = text;
+      // ===============================================
+      // const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      // let i = 0;
+      // let text = "";
+      // while (cars[i]) {
+      //   text += cars[i] + "<br>";
+      //   i++;
+      // }
+      // document.getElementById("demo").innerHTML = text;
+
+      // ===============================================
+    </script> -->
+
+    <!-- ===================[try -catch]==================  -->
+
+    <!--     
+    <script>
+
+      try {
+        alert(carName);
+        const carName = "Volvo";
+      }
+      catch (err) {
+        document.getElementById("demo").innerHTML = err;
+      }
+        </script>
+     -->
+  </body>
+</html>
