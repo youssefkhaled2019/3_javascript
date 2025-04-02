@@ -1,7 +1,6 @@
 #Events  https://www.w3schools.com/jsref/dom_obj_event.asp
 
 JS Tutorial
-                    JS Assignment
                     JS Strings
                     JS String Methods
                     JS String Search

@@ -1,0 +1,5 @@
+new Date().getHours();
+new Date().getDay()
+
+
+Math.random()

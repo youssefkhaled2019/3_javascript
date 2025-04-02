@@ -222,6 +222,7 @@ let answer3 = 'He is called "Johnny"';
         //     price = 200;
 
 </script> -->
+
     <!-- ================[if, else, and else if]=====================  -->
     <!-- <script>
 //   ****************************************  
@@ -235,6 +236,8 @@ if (hour < 18) {
   greeting = "Good evening";
 }
 //   ****************************************  
+const time = new Date().getHours();
+
 if (time < 10) {
   greeting = "Good morning";
 } else if (time < 20) {
@@ -333,6 +336,22 @@ document.getElementById("demo").innerHTML = text;
     <!-- =================[Operators]====================  -->
     <!-- <script>
 
+
+  // Types of JavaScript Operators
+  // There are different types of JavaScript operators:
+  //   -Arithmetic Operators  ( +, -, * ,/ , % ), ** Exponentiation , ++ Increment , -- Decrement
+  //   -Assignment Operators   ( =,+=,-=,*=,/=,%=,**=,, )
+  //   -Comparison Operators (== ,===,!=,!==,>,<,>=,<=,?,) # ? 	ternary operator
+  //   -String Operators  (>,<,+)
+  //   -Logical Operators  (&&,||,!) 
+  //   -Bitwise Operators  (&,|,~,^,<<,>>,>>>)
+  //   -Ternary Operators
+  //   -Type Operators    (typeof,
+  //                       instanceof  #Returns true if an object is an instance of an object type 
+
+
+
+
     //var x = 10;
     //x += 5;
 
@@ -350,6 +369,27 @@ document.getElementById("demo").innerHTML = text;
 //   /= 	    x /= y 	    x = x / y
 //   %= 	    x %= y 	    x = x % y
 //   **= 	    x **= y 	  x = x ** y
+
+// Operator 	Example 	Same As              //Shift Assignment Operators
+// <<= 	    x <<= y 	x = x << y
+// >>= 	    x >>= y 	x = x >> y
+// >>>= 	    x >>>= y 	x = x >>> y
+
+//Operator 	Example 	Same As               //Bitwise Assignment Operators
+//&= 	      x &= y 	x = x & y
+//^= 	      x ^= y 	x = x ^ y
+//|= 	      x |= y 	x = x | y
+
+
+//Operator 	Example 	Same As                  //Logical Assignment Operators
+//&&= 	    x &&= y 	x = x && (x = y)
+//||= 	    x ||= y 	x = x || (x = y)
+//??= 	    x ??= y 	x = x ?? (x = y)
+
+let x = 100; x &&= 5;  OUTPUT =>5 //If the first value is true, the second value is assigned.
+let x = undefined; x ||= 5; OUTPUT =>5 //If the first value is false, the second value is assigned.
+let x = 10; x ||= 5;OUTPUT =>10
+let x; x ??= 5;OUTPUT =>5   //If the first value is undefined or null, the second value is assigned.
 // ************************** Comparison Operators *****************************//
 // Operator 	Description
 // == 	      equal to
@@ -378,7 +418,7 @@ document.getElementById("demo").innerHTML = text;
 //   ^ 	      XOR 	                  5 ^ 1 	  0101 ^ 0001 	0100 	   4
 //  << 	      left shift 	            5 << 1 	  0101 << 1 	  1010    	 10
 //  >> 	      right shift 	          5 >> 1 	  0101 >> 1 	  0010 	      2
-//  >>> 	    unsigned right shift 	  5 >>> 1 	0101 >>> 1 	  0010 	     2
+//  >>> 	    unsigned right shift 	  5 >>> 1 	0101 >>> 1 	  0010 	     2    #??
 
 
 
@@ -764,11 +804,11 @@ const myFather = new Person("John", "Doe", 50, "blue");
 const myMother = new Person("Sally", "Rally", 48, "green");
 const mySister = new Person("Anna", "Rally", 18, "green");
 
-mySister.mode = "single";
+mySister.mode = "single"; //The new property will be added to mySister. Not to any other Person Objects.
 
 // Person.nationality = "English";//You can NOT add a new property to an object constructor:
 // Person.prototpe.nationality = "English"; // To add a new property, you must add it to the constructor function prototype:
-
+//then nationality added in all obeject automatic 
 
 
 
@@ -814,7 +854,7 @@ document.getElementById("demo").innerHTML =
 // new RegExp()   // A new RegExp object
 // new Function() // A new Function object
 
-// Note:The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+// Note:The Math() object is not in the list. Math is a global object. The [new] keyword cannot be used on Math.
 //     //==============================//
 // "";           // primitive string
 // 0;            // primitive number
